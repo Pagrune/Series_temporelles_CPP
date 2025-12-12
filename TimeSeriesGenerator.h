@@ -15,7 +15,7 @@ class TimeSeriesGenerator{
 
 
 
-        virtual vector<double> generateTimeSeries(int _seed) = 0;
+        virtual vector<double> generateTimeSeries(int length) = 0;
 
 
         static void printTimeSeries(const vector<double> myvector);
