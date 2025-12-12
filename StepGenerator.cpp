@@ -13,8 +13,8 @@ vector<double> StepGenerator::generateTimeSeries(int length) {
     double current = 0.0;
 
     for (int i = 0; i < length; i++) {
-        // Avec 50% de chance, changer de valeur
-        if (i > 0 && rand() % 2 == 0) {      // 0 ou 1 → 50/50
+        // 50% changer de valeur
+        if (i > 0 && rand() % 2 == 0) {   
             current = rand() % 101;
         }
 
