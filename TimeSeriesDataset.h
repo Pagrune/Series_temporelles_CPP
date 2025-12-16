@@ -23,6 +23,8 @@ class TimeSeriesDataset{
         void znormalize();
 
         double euclideanDistance(const vector<double>& ts1, const vector<double>& ts2);
+
+        double DTW(const vector<double>& ts1, const vector<double>& ts2);
 };
 
 
