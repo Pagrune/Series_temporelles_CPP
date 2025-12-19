@@ -10,7 +10,7 @@ class TimeSeriesDataset{
     private:
         bool _znormalize;
         bool _isTrain;
-        vector<double> _data;
+        vector<vector<double>> _data;
         vector<int> _labels;
         int _maxlength;
         int _numberOfSamples;
@@ -18,9 +18,11 @@ class TimeSeriesDataset{
     public: 
         // Constructors
         TimeSeriesDataset();
-        TimeSeriesDataset(const vector<double>& data, const vector<int>& labels, bool znormalize=false, bool isTrain=true);
+        TimeSeriesDataset(bool znormalize, bool isTrain);
 
-        void znormalize();
+        void znormalize(vector<double> data);
+
+        void addTimeSeries(vector<double> data, int label);
 
         double euclideanDistance(const vector<double>& ts1, const vector<double>& ts2);
 
